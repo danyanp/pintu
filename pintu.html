@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>拼图1.0</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="jqsession.js"></script>
+    <link rel="stylesheet" href="pintu.css">
+</head>
+<body>
+    <div class="main">
+        <h1 style="text-align: center;">拼图v1.0</h1>
+        <div class="container"></div>
+        <div id="timecount">
+            <span id="span1">00</span> :
+            <span id="span2">00</span> :
+            <span id="span3">00</span> :
+            <span id="span4">00</span>
+        </div>
+        <div>
+            <button id="startGame" class="dbutton">开始游戏</button>
+            <button id="restartGame" class="dbutton">重置游戏</button>  
+        </div>
+        <!-- <div id="getimg" style="background-color: red;width: 200px;height: 150px;margin-left: auto;margin-right: auto;margin-top: 20px;">
+        <p style="text-align: center;">更换图片，请将图片拖拽到这里</p>
+        </div> -->
+                <!-- 上传文件 -->
+        <div class="getimg" style="background-color:#F5F5F5; width: 200px;height: 120px;margin: auto;">
+            <p class="text">图片拖拽至此区域</p>
+        </div>
+    </div>
+</body>
+<script>
+
+    // $(function () {
+    //     var container = $(".getimg").get(0);
+    //     var oP = $(".text");
+    //     console.log(container)
+    //     //进入
+    //     container.ondragenter = function () {
+    //         oP.html('');
+    //     }
+    //     //移动，需要阻止默认行为，否则直接在本页面中显示文件
+    //     container.ondragover = function (e) {
+    //         e.preventDefault();
+    //     }
+    //     //离开
+    //     container.onleave = function () {
+    //         oP.html('<p>请将图片文件拖拽至此区域！</p>');
+    //     }
+    //     var ondrop_time = false
+    //     //拖拽放置，也需要阻止默认行为
+    //     container.ondrop = function (e) {
+    //         e.preventDefault();
+    //         //获取拖拽过来的对象,文件对象集合
+    //         var fs = e.dataTransfer.files;
+    //         //若为表单域中的file标签选中的文件，则使用form[表单name].files[0]来获取文件对象集合
+    //         //打印长度
+    //         console.log(ondrop_time)
+    //         if(fs.length>1||ondrop_time!=false){
+    //             alert("只允许上传一张照片！")
+    //             return
+    //         }
+    //         //循环多文件拖拽上传
+    //         for (var i = 0; i < fs.length; i++) {
+    //             ondrop_time = true
+    //             //文件类型
+    //             var _type = fs[i].type;
+    //             console.log(_type);
+    //             //判断文件类型
+    //             if (_type.indexOf('image') != -1) {
+    //                 //文件大小控制
+    //                 console.log(fs[i].size);
+    //                 //读取文件对象
+    //                 var reader = new FileReader();
+    //                 //读为DataUrl,无返回值
+    //                 reader.readAsDataURL(fs[i]);
+    //                 reader.onloadstart = function (e) {
+    //                     //开始加载
+    //                 }
+    //                 // 这个事件在读取进行中定时触发
+    //                 reader.onprogress = function (e) {
+    //                     $("#total").html(e.total);
+    //                 }
+
+    //                 //当读取成功时触发，this.result为读取的文件数据
+    //                 reader.onload = function () {
+    //                     //文件数据
+    //                     //console.log(this.result);
+    //                     //添加文件预览
+    //                     var oImg = $("<img style='width:200px;' src='' />");
+    //                     oImg.attr("src", this.result);
+    //                     $(container).append(oImg); //oDiv转换为js对象调用方法
+    //                 }
+    //                 //无论成功与否都会触发
+    //                 reader.onloadend = function () {
+    //                     if (reader.error) {
+    //                         console.log(reader.error);
+    //                     } else {
+    //                         //随机分割图片
+    //                     }
+    //                 }
+    //             } else {
+    //                 alert('请上传图片文件！');
+    //             }
+    //         }
+    //     }
+    // });
+</script>
+<script src="pintu.js"></script>
+</html>
